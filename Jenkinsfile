@@ -22,7 +22,7 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage("Sonarqube analysis"){
+        stage("Sonarqube Analysis"){
             steps{
                 withSonarQubeEnv ("sonar-server01") {
                     sh ''' 
