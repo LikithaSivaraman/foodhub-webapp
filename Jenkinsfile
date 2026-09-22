@@ -65,7 +65,7 @@ pipeline {
             steps{
                 script{
                     withDockerRegistry(credentialsId: 'dockerhub-creds', toolname: 'docker') {
-                        sh ' docker run -d --name app-image -p 9090:9090 likithas01/my-food-webapp:latest '
+                        sh ' docker run -d --name app-image -p 9090:8080 likithas01/my-food-webapp:latest '
                     }        
 }
                 
