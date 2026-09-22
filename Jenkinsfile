@@ -43,7 +43,7 @@ pipeline {
             steps{
                 script{
                     withDockerRegistry(credentialsId: 'dockerhub-creds', toolname: 'docker') {
-                        sh ' docker build my-food-webapp -f Dockerfile'
+                        sh ' docker build my-food-webapp -f Dockerfile .'
                         sh ' docker tag my-food-webapp likithas01/my-food-webapp:latest '
                     }        
 }
