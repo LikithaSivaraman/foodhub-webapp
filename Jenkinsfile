@@ -51,6 +51,16 @@ pipeline {
                 
             }
         }
+        stage("Push Docker Image to dockerhub") {
+            steps{
+                script{
+                    withDockerRegistry(credentialsId: 'dockerhub-creds', toolname: 'docker') {
+                        sh ' docker push likithas01/my-food-webapp:latest '
+                    }        
+}
+                
+            }
+        }
 
                 
         
