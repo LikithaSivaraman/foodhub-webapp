@@ -39,12 +39,7 @@ pipeline {
                 sh 'mvn clean package -DskipTests=true'
             }
         }
-        stage ( "Clean up all old Docker images .. containers"){
-            steps{
-                sh ' docker rm $(docker ps -aq) '
-                sh ' docker stop $(docker ps -aq)'
-            }
-        }
+       
         stage("Build Docker Image") {
             steps{
                 script{
