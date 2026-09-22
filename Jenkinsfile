@@ -6,7 +6,7 @@ pipeline {
     }
 
     stages {
-        stage('Git Checkout') {
+        stage('Git-Checkout') {
             steps {
                 // Get some code from a GitHub repository
                 git branch: 'main', url: 'https://github.com/LikithaSivaraman/foodhub-webapp.git'
