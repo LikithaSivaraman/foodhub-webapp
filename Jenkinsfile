@@ -41,7 +41,7 @@ pipeline {
         }
         stage ( "Clean up all old Docker images .. containers"){
             steps{
-                sh ' docker system prune -a --volumes '
+                sh ' docker system prune -a -f '
             }
         }
         stage("Build Docker Image") {
