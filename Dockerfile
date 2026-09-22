@@ -1,4 +1,4 @@
-FROM jetty:11-jdk17
-COPY foodhub.war /var/lib/jetty/webapps/root.war
-EXPOSE 9090
+FROM tomcat:9.0-jdk17
+COPY target/foodhub.war /usr/local/tomcat/webapps/
+EXPOSE 8080
 CMD ["java", "-war","foodhub.war"]
