@@ -42,6 +42,7 @@ pipeline {
         stage ( "Clean up all old Docker images .. containers"){
             steps{
                 sh ' docker rm $(docker ps -aq) '
+                sh ' docker stop $(docker ps -aq)'
             }
         }
         stage("Build Docker Image") {
