@@ -46,7 +46,7 @@ pipeline {
                     withDockerRegistry(credentialsId: 'dockerhub-creds', toolname: 'docker') {
                         sh ' cd /var/lib/jenkins/workspace/Pipeline_project '
                         sh ' docker build -t my-food-webapp -f Dockerfile .'
-                        sh ' docker tag my-food-webapp likithas01/my-food-webapp:latest '
+                        sh ' docker tag my-food-webapp likithas01/my-food-webapp:v1 '
                     }        
 }
                 
@@ -56,7 +56,7 @@ pipeline {
             steps{
                 script{
                     withDockerRegistry(credentialsId: 'dockerhub-creds', toolname: 'docker') {
-                        sh ' docker push likithas01/my-food-webapp:latest '
+                        sh ' docker push likithas01/my-food-webapp:v1 '
                     }        
 }
                 
