@@ -48,7 +48,7 @@
             </p>
 
             <h1>
-                Delicious Food.....!
+                Delicious Food.., rich and creamy!!
                 <br>
                 Made With Love.
             </h1>
